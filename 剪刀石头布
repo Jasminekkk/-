@@ -1,0 +1,179 @@
+#include<stdio.h>        /*编译预处理命令*/
+void main()              /*主函数*/ 
+{
+ int sel;                   /*变量定义*/
+ double res;               /*变量定义*/
+ srand(time(NULL));      /*函数声明*/ 
+  struct user{       /*定义用户结构体类型*/
+        	char user name[10];  /*用户名*/
+        	int total,sum;   /*用户以往进行游戏次数、历史总得分*/ 
+        };
+       	int i,computer_selection = rand()%3;
+        char letter;
+        struct user s[50];
+        struct user input_user();
+        void output_user(struct user s[]);
+ /*菜单功能*/
+ while(1)
+ {
+   /*显示菜单*/
+   printf("          菜单功能\n");
+   printf("--------------------------------\n");
+   printf("1-练习模式   2-实名对战模式   3-排行榜    0-退出游戏\n");
+   printf("--------------------------------\n");
+   /*选择菜单*/
+   printf("请输入(1、2、3或0)：\n");/*输入提示*/ 
+   scanf ("%d",&sel);
+   /*多分支处理：调用函数或退出循环*/
+   if(sel==0)break;/*退出循环*/
+   switch(sel
+   {
+   	 case 1:  /*练习模式*/
+        int computer_selection = rand()%3;
+        char letter;
+        printf("Enter Your Choice: ");
+        scanf("%c",&letter);
+        if(letter!='r' && letter!='p' && letter!='s')
+            printf("input error!\n");
+        else
+        {
+ 
+            if((letter=='r') && (computer_selection == 0))
+            {
+               printf("You picked Rock. Computer picks Rock. You both tie!\n");
+            }
+            else if  ((letter=='r') && (computer_selection == 1))
+            {
+               printf("You picked Rock. Computer picks Paper. You lose!\n");
+            }
+            else if  ((letter=='r') && (computer_selection == 2))
+            {
+               printf("You picked Rock. Computer picks Scissors. You win!\n");
+            }
+ 
+ 
+ 
+            if  ((letter=='p') && (computer_selection == 0))
+            {
+                  printf("You picked Paper. Computer picks Rock. You win!\n");
+            }
+            else if ((letter=='p') && (computer_selection == 1))
+            {
+                  printf("You picked Paper. Computer picks Paper. You both tie!\n");
+            }
+            else if ((letter=='p') && (computer_selection == 2))
+            {
+                  printf("You picked Paper. Computer picks Scissors. You lose!\n");
+            }
+ 
+            if ((letter=='s') && (computer_selection == 0))
+            {
+                printf("You picked Scissors. Computer picks Rock. You lose!\n");
+            }
+            if ((letter=='s') && (computer_selection == 1))
+           {
+                printf("You picked Scissors. Computer picks Paper. You win!\n");
+           }
+           else if ((letter=='s') && (computer_selection == 2))
+           {
+                   printf("You picked Scissors. Computer picks Scissors. You both tie!\n");
+            }
+       }
+       break;
+    case 2:  /*实名对战模式*/
+        printf("Enter Your Name: ");
+        scanf("%s",&user.name);
+        printf("游戏共进行的局数：");
+        scanf("%d",&n);        
+        printf("Enter Your Choice: ");
+        scanf("%c",&letter);
+        for(i=1,i++,i<=n){
+            if(letter!='r' && letter!='p' && letter!='s')
+                 printf("input error!\n");
+            else
+            {
+ 
+               if((letter=='r') && (computer_selection == 0))
+               {
+               	   sum=sum;
+                   printf("You picked Rock. Computer picks Rock. You both tie!\n");
+               }
+               else if  ((letter=='r') && (computer_selection == 1))
+              {
+              	 sum=sum-1;
+                 printf("You picked Rock. Computer picks Paper. You lose!\n");
+              }
+              else if  ((letter=='r') && (computer_selection == 2))
+              {
+              	 sum=sum++;
+                 printf("You picked Rock. Computer picks Scissors. You win!\n");
+              }
+ 
+ 
+ 
+             if  ((letter=='p') && (computer_selection == 0))
+             {
+             	  sum=sum++;
+                  printf("You picked Paper. Computer picks Rock. You win!\n");
+             }
+             else if ((letter=='p') && (computer_selection == 1))
+             {
+             	  sum=sum;
+                  printf("You picked Paper. Computer picks Paper. You both tie!\n");
+             }
+             else if ((letter=='p') && (computer_selection == 2))
+             {
+             	  sum=sum-1;
+                  printf("You picked Paper. Computer picks Scissors. You lose!\n");
+             }
+ 
+             if ((letter=='s') && (computer_selection == 0))
+             {
+             	sum=sum-1;
+                printf("You picked Scissors. Computer picks Rock. You lose!\n");
+             }
+             if ((letter=='s') && (computer_selection == 1))
+             {
+             	sum=sum++;
+                printf("You picked Scissors. Computer picks Paper. You win!\n");
+             }
+             else if ((letter=='s') && (computer_selection == 2))
+             {
+             	   sum=sum;
+                   printf("You picked Scissors. Computer picks Scissors. You both tie!\n");
+             }
+           }
+        }
+        if (2*sum==n)
+        {
+                printf("You both tie!\n");
+        }
+        if (2*sum<n)
+        {
+                printf("You lose!\n");
+        }
+        else if (2*sum>n)
+        {
+                   printf(" You both win!\n");
+        }
+        s[j]=inputuser();
+  case 3:
+    int p,q,index;
+	struct user temp;
+	for(p=1,p<=j,p++){
+	 index=p;
+	 for(q=p;q<=j;q++) if(s[q].sum>s[index].sum) index=q;
+	 temp=s[p];s[j]=s[index];s[index]=temp; 
+      }
+    }
+    output_user(s,j);
+   }
+   break;
+   default:
+        printf("选择错误！\n");
+        break;
+   }
+  }
+  printf("欢迎下次使用！\n");
+ } 
+    
